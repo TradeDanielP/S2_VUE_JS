@@ -29,8 +29,6 @@ onMounted(()=> {
     fetchMovies()
 })
 
-
-
 async function  fetchMovies() {
   await store.getMovies()
 }   

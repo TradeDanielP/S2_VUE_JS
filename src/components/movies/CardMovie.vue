@@ -12,7 +12,7 @@
             <span>Tipo:</span>
             {{ props.type }}
         </p>
-        <<router-link :to="{ name: 'movie-details', params: {id: props.id}}">Ver Detalles</router-link> 
+        <router-link :to="{ name: 'movie-details', params: {id: props.id}}" class="viewDetails">Ver Detalles</router-link> 
     </div>
 </template>
 
@@ -59,6 +59,14 @@ const props = defineProps<IProps>()
             height: 300px;
             object-fit: scale-down;
             border-radius: 10px;
+        }
+
+        .viewDetails{
+            background-color: $primary;
+            color: $white;
+            padding: 1%;
+            border-radius: 5px;
+            text-decoration: none;
         }
     }
 </style>
